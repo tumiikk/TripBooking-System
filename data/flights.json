@@ -1,0 +1,42 @@
+[
+    {
+        "origin": "Pekanbaru",
+        "destination": "Jakarta",
+        "price": 950000
+    },
+    {
+        "origin": "Pekanbaru",
+        "destination": "Jakarta",
+        "price": 1200000
+    },
+    {
+        "origin": "Pekanbaru",
+        "destination": "Bali",
+        "price": 1800000
+    },
+    {
+        "origin": "Pekanbaru",
+        "destination": "Lombok",
+        "price": 1700000
+    },
+    {
+        "origin": "Jakarta",
+        "destination": "Bali",
+        "price": 1300000
+    },
+    {
+        "origin": "Jakarta",
+        "destination": "Lombok",
+        "price": 1500000
+    },
+    {
+        "origin": "Medan",
+        "destination": "Jakarta",
+        "price": 1000000
+    },
+    {
+        "origin": "Batam",
+        "destination": "Jakarta",
+        "price": 850000
+    }
+]

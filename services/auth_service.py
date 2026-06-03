@@ -1,81 +1,48 @@
-
-from utils.file_handler import load_json, save_json
-from structures.hash_table import LoginHashTable
+from structures.hash_table import HashTable
+from utils.json_handler import load_json, save_json
 
 USER_FILE = "data/users.json"
 
 
-def proses_login():
-    login = LoginHashTable()
+class AuthService:
+    def __init__(self):
+        self.users = load_json(USER_FILE)
+        self.table = HashTable()
 
-    login.load_users(USER_FILE)
+        for user in self.users:
+            self.table.insert(user["username"], user)
 
-    data = load_json(USER_FILE)
+    def register(self):
+        username = input("Username : ")
+        password = input("Password : ")
 
-    username = input("Username : ")
-    password = input("Password : ")
+        if self.table.search(username):
+            print("Username sudah ada.")
+            return
 
-    if not login.login(username, password):
-        print("Username atau password salah")
-        return
+        user = {
+            "username": username,
+            "password": password,
+            "saldo": 0,
+            "wishlist": []
+        }
 
-    if username == data["admin"]["username"]:
-        user = data["admin"]
-        role = "admin"
-        print("selamat datang admin!!")
-        return user, role
+        self.users.append(user)
+        save_json(USER_FILE, self.users)
 
+        self.table.insert(username, user)
 
-    else:
-        user = data["users"][username]
-        role = "user"
+        print("Register berhasil.")
 
-    print("Login berhasil")
+    def login(self):
+        username = input("Username : ")
+        password = input("Password : ")
 
-    return user, role
+        user = self.table.search(username)
 
-def proses_register():
-    data = load_json(USER_FILE)
+        if user and user["password"] == password:
+            print("Login berhasil.")
+            return user
 
-    print("\n=== REGISTER ===")
-
-    username = input("Username : ").strip()
-
-    # cek username sudah ada atau belum
-    if username in data["users"]:
-        print("Username sudah dipakai")
-        return
-
-    nama = input("Nama : ")
-    email = input("Email : ")
-    password = input("Password : ")
-
-    if len(password) < 6:
-        print("Password minimal 6 karakter")
-        return
-
-    konfirmasi = input("Konfirmasi Password : ")
-
-    if password != konfirmasi:
-        print("Password tidak cocok")
-        return
-
-    user_baru = {
-        "username": username,
-        "password": password,
-        "nama": nama,
-        "email": email,
-        "saldo": 0,
-        "poin": 0,
-        "membership": "Bronze",
-        "booking_history": [],
-        "wishlist": []
-    }
-
-    data["users"][username] = user_baru
-
-    save_json(USER_FILE, data)
-
-    print("Register berhasil")
-
-proses_register()
+        print("Login gagal.")
+        return None

@@ -1,10 +1,28 @@
-{
-    "izza": {
-        "password": "123543",
-        "saldo": 98800000
+[
+    {
+        "username": "admin",
+        "password": "123",
+        "saldo": 5000000,
+        "wishlist": [
+            "Bali",
+            "Lombok"
+        ]
     },
-    "tumik": {
-        "password": "543221",
-        "saldo": 1000000
+    {
+        "username": "budi",
+        "password": "123",
+        "saldo": 30002000001,
+        "wishlist": [
+            "bali"
+        ]
+    },
+    {
+        "username": "tumik",
+        "password": "123543",
+        "saldo": 30000000000,
+        "wishlist": [
+            "bali",
+            "pekan"
+        ]
     }
-}
+]

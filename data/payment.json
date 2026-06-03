@@ -1,0 +1,88 @@
+{
+  "flights": {
+    "FL004": {
+      "kode": "FL004",
+      "maskapai": "Batik Air",
+      "asal": "Jakarta",
+      "tujuan": "Surabaya",
+      "jam_berangkat": "11:00",
+      "jam_tiba": "12:30",
+      "durasi": 90,
+      "harga": 700000,
+      "kursi_tersedia": 100,
+      "tanggal": "2026-06-01"
+    },
+    "FL005": {
+      "kode": "FL005",
+      "maskapai": "AirAsia",
+      "asal": "Surabaya",
+      "tujuan": "Denpasar",
+      "jam_berangkat": "14:00",
+      "jam_tiba": "15:00",
+      "durasi": 60,
+      "harga": 400000,
+      "kursi_tersedia": 80,
+      "tanggal": "2026-06-01"
+    },
+    "FL006": {
+      "kode": "FL006",
+      "maskapai": "Super Air Jet",
+      "asal": "Pekanbaru",
+      "tujuan": "Surabaya",
+      "jam_berangkat": "08:00",
+      "jam_tiba": "10:00",
+      "durasi": 120,
+      "harga": 600000,
+      "kursi_tersedia": 90,
+      "tanggal": "2026-06-01"
+    },
+    "FL007": {
+      "kode": "FL007",
+      "maskapai": "Citilink",
+      "asal": "Denpasar",
+      "tujuan": "Lombok",
+      "jam_berangkat": "16:00",
+      "jam_tiba": "16:45",
+      "durasi": 45,
+      "harga": 300000,
+      "kursi_tersedia": 70,
+      "tanggal": "2026-06-01"
+    },
+    "FL008": {
+      "kode": "FL008",
+      "maskapai": "Garuda Indonesia",
+      "asal": "Jakarta",
+      "tujuan": "Yogyakarta",
+      "jam_berangkat": "13:00",
+      "jam_tiba": "14:15",
+      "durasi": 75,
+      "harga": 500000,
+      "kursi_tersedia": 110,
+      "tanggal": "2026-06-01"
+    },
+    "FL009": {
+      "kode": "FL009",
+      "maskapai": "Lion Air",
+      "asal": "Yogyakarta",
+      "tujuan": "Denpasar",
+      "jam_berangkat": "15:30",
+      "jam_tiba": "17:00",
+      "durasi": 90,
+      "harga": 450000,
+      "kursi_tersedia": 95,
+      "tanggal": "2026-06-01"
+    }
+  },
+  "bookings": {
+    "BK001": {
+      "kode_booking": "BK001",
+      "username": "budi",
+      "tipe": "flight",
+      "item_id": "FL001",
+      "jumlah": 1,
+      "total_harga": 850000,
+      "status": "confirmed",
+      "tanggal_booking": "2026-05-10"
+    }
+  }
+}
