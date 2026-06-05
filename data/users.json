@@ -24,5 +24,11 @@
             "bali",
             "pekan"
         ]
+    },
+    {
+        "username": "shabrin",
+        "password": "shab123",
+        "saldo": 0,
+        "wishlist": []
     }
 ]
