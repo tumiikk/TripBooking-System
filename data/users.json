@@ -19,10 +19,16 @@
     {
         "username": "tumik",
         "password": "123543",
-        "saldo": 30000000000,
+        "saldo": 30001000000,
         "wishlist": [
             "bali",
             "pekan"
         ]
+    },
+    {
+        "username": "fs",
+        "password": "dfdvfd",
+        "saldo": 1000000000000,
+        "wishlist": []
     }
 ]

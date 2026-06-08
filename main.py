@@ -5,16 +5,15 @@ from services.travel_service import TravelService
 
 def profile_menu(user):
     profile = ProfileService(user)
-
+    travel = TravelService(user)
     while True:
         print("\n=== PROFILE CENTER ===")
         print("1. Lihat Profil")
         print("2. Lihat Saldo")
         print("3. Isi Saldo")
-        print("4. Tambah Wishlist")
-        print("5. Lihat Wishlist")
-        print("6. Riwayat Booking")
-        print("7. Kembali")
+        print("4. Wishlist")
+        print("5. Riwayat Booking")
+        print("0. Kembali")
 
         pilih = input("Pilih : ")
 
@@ -28,15 +27,31 @@ def profile_menu(user):
             profile.isi_saldo()
 
         elif pilih == "4":
-            profile.tambah_wishlist()
+            profile.lihat_wishlist()
+            tambah = input("\n Mau tambah wishlist?? (y/n)").lower()
+            if tambah == "y":
+                profile.tambah_wishlist()
+                continue
+            print("baiklah..")
 
         elif pilih == "5":
-            profile.lihat_wishlist()
+            print("pilihan lihat riwayat booking")
+            print("1. seluruhnya")
+            print("2. yang barusan")
+            pilihan_riwayat = input("pilih : ")
+            if pilihan_riwayat == "1":
+                profile.lihat_riwayat_booking()
+            elif pilihan_riwayat == "2":
+                travel.lihat_riwayat_booking()
 
-        elif pilih == "6":
-            profile.riwayat_booking()
+            undo = input("\n Mau undo book terakhir?? (y/n)").lower()
 
-        elif pilih == "7":
+            if undo == "y" :
+                profile.undo_booking_terakhir()
+                continue
+            print("baiklahh..")
+
+        elif pilih == "0":
             break
 
 
@@ -49,8 +64,9 @@ def travel_menu(user):
         print("2. Destinasi Populer")
         print("3. Lihat Penerbangan")
         print("4. Booking Penerbangan")
-        print("5. Cari Tiket Range Harga")
-        print("6. Kembali")
+        print("5. menu search")
+
+        print("0. Kembali")
 
         pilih = input("Pilih : ")
 
@@ -61,15 +77,26 @@ def travel_menu(user):
             travel.destinasi_populer()
 
         elif pilih == "3":
-            travel.lihat_penerbangan()
+            print("pilih metode lihat penerbangannya")
+            print("1. lihat seluruh penerbangan")
+            print("2. lihat rute ke kota tertentu")
+            print("3. lihat penerbangan sesuai budget")
+
+            pilihan = input("pilihan : ")
+            if pilihan == "1" :
+                travel.lihat_seluruh_penerbangan()
+            elif pilihan == "2":
+                travel.lihat_rute_penerbangan_langsung()
+            elif pilihan == "3":
+                travel.cari_range_harga()
 
         elif pilih == "4":
             travel.booking()
 
         elif pilih == "5":
-            travel.cari_range_harga()
-
-        elif pilih == "6":
+            travel.menu_searching()
+            
+        elif pilih == "0":  
             break
 
 
@@ -80,7 +107,7 @@ def main():
         print("\n=== AEROBOOK ===")
         print("1. Register")
         print("2. Login")
-        print("3. Keluar")
+        print("0. Keluar")
 
         pilih = input("Pilih : ")
 
@@ -105,12 +132,11 @@ def main():
                     elif menu == "2":
                         travel_menu(user)
 
-                    elif menu == "3":
+                    elif menu == "0":
                         break
 
         elif pilih == "3":
             print("Terima kasih.")
             break
-
 
 main()

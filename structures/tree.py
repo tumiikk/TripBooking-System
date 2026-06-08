@@ -3,12 +3,11 @@ class TreeNode:
         self.data = data
         self.children = []
 
-    def add_child(self, node):
-        self.children.append(node)
+    def add_child(self, child):
+        self.children.append(child)
 
-
-def display_tree(node, level=0):
-    print("  " * level + node.data)
+def print_tree(node, level=0):
+    print("  " * level + str(node.data))
 
     for child in node.children:
-        display_tree(child, level + 1)
+        print_tree(child, level + 1)

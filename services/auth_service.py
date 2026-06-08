@@ -11,10 +11,11 @@ class AuthService:
 
         for user in self.users:
             self.table.insert(user["username"], user)
-
+            
     def register(self):
         username = input("Username : ")
         password = input("Password : ")
+
 
         if self.table.search(username):
             print("Username sudah ada.")

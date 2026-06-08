@@ -1,42 +1,92 @@
 [
     {
-        "origin": "Pekanbaru",
-        "destination": "Jakarta",
-        "price": 950000
+        "kode_penerbangan": "AB001",
+        "nama_pesawat": "Garuda Indonesia GA-101",
+        "asal": "Pekanbaru",
+        "tujuan": "Jakarta",
+        "harga": 950000,
+        "tanggal": "2026-07-10",
+        "seat": 21
     },
     {
-        "origin": "Pekanbaru",
-        "destination": "Jakarta",
-        "price": 1200000
+        "kode_penerbangan": "AB002",
+        "nama_pesawat": "Batik Air ID-6350",
+        "asal": "Pekanbaru",
+        "tujuan": "Jakarta",
+        "harga": 1200000,
+        "tanggal": "2026-07-12",
+        "seat": 21
     },
     {
-        "origin": "Pekanbaru",
-        "destination": "Bali",
-        "price": 1800000
+        "kode_penerbangan": "AB003",
+        "nama_pesawat": "Citilink QG-935",
+        "asal": "Pekanbaru",
+        "tujuan": "Bali",
+        "harga": 1800000,
+        "tanggal": "2026-07-15",
+        "seat": 21
     },
     {
-        "origin": "Pekanbaru",
-        "destination": "Lombok",
-        "price": 1700000
+        "kode_penerbangan": "AB004",
+        "nama_pesawat": "Lion Air JT-762",
+        "asal": "Pekanbaru",
+        "tujuan": "Lombok",
+        "harga": 1700000,
+        "tanggal": "2026-07-18",
+        "seat": 21
     },
     {
-        "origin": "Jakarta",
-        "destination": "Bali",
-        "price": 1300000
+        "kode_penerbangan": "AB005",
+        "nama_pesawat": "Garuda Indonesia GA-412",
+        "asal": "Jakarta",
+        "tujuan": "Bali",
+        "harga": 1300000,
+        "tanggal": "2026-07-20",
+        "seat": 21
     },
     {
-        "origin": "Jakarta",
-        "destination": "Lombok",
-        "price": 1500000
+        "kode_penerbangan": "AB006",
+        "nama_pesawat": "Super Air Jet IU-823",
+        "asal": "Jakarta",
+        "tujuan": "Lombok",
+        "harga": 1500000,
+        "tanggal": "2026-07-22",
+        "seat": 21
     },
     {
-        "origin": "Medan",
-        "destination": "Jakarta",
-        "price": 1000000
+        "kode_penerbangan": "AB007",
+        "nama_pesawat": "Batik Air ID-678",
+        "asal": "Medan",
+        "tujuan": "Jakarta",
+        "harga": 1000000,
+        "tanggal": "2026-07-25",
+        "seat": 22
     },
     {
-        "origin": "Batam",
-        "destination": "Jakarta",
-        "price": 850000
+        "kode_penerbangan": "AB008",
+        "nama_pesawat": "Citilink QG-451",
+        "asal": "Batam",
+        "tujuan": "Jakarta",
+        "harga": 850000,
+        "tanggal": "2026-07-28",
+        "seat": 21
+    },
+    {
+        "kode_penerbangan": "AB009",
+        "nama_pesawat": "Lion Air JT-522",
+        "asal": "Jakarta",
+        "tujuan": "Surabaya",
+        "harga": 750000,
+        "tanggal": "2026-08-01",
+        "seat": 21
+    },
+    {
+        "kode_penerbangan": "AB010",
+        "nama_pesawat": "Garuda Indonesia GA-340",
+        "asal": "Surabaya",
+        "tujuan": "Bali",
+        "harga": 600000,
+        "tanggal": "2026-08-03",
+        "seat": 21
     }
 ]

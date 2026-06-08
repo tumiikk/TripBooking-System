@@ -1,8 +1,29 @@
 [
     {
-        "username": "izza",
-        "kode": "FL001",
+        "username": "tumik",
+        "kode_penerbangan": "AB002",
+        "tanggal_penerbangan": "2026-07-12",
+        "asal": "Pekanbaru",
         "tujuan": "Jakarta",
-        "harga": 1200000
+        "harga": 1200000,
+        "tanggal_booking": "07-06-2026 00:52:51"
+    },
+    {
+        "username": "tumik",
+        "kode_penerbangan": "AB003",
+        "tanggal_penerbangan": "2026-07-15",
+        "asal": "Pekanbaru",
+        "tujuan": "Bali",
+        "harga": 1800000,
+        "tanggal_booking": "07-06-2026 03:31:52"
+    },
+    {
+        "username": "tumik",
+        "kode_penerbangan": "AB010",
+        "tanggal_penerbangan": "2026-08-03",
+        "asal": "Surabaya",
+        "tujuan": "Bali",
+        "harga": 600000,
+        "tanggal_booking": "07-06-2026 03:33:30"
     }
 ]
