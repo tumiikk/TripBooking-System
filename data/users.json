@@ -26,9 +26,15 @@
         ]
     },
     {
+<<<<<<< HEAD
         "username": "fs",
         "password": "dfdvfd",
         "saldo": 1000000000000,
+=======
+        "username": "shabrin",
+        "password": "shab123",
+        "saldo": 0,
+>>>>>>> f75d7907f9e37a28371497f59575f5d3bdb8dbde
         "wishlist": []
     }
 ]

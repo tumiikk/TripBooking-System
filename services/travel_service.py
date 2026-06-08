@@ -1,17 +1,23 @@
 from utils.json_handler import load_json, save_json
 from structures.sorting import quick_sort
 from structures.bst import insert, range_search
+<<<<<<< HEAD
 from structures.stack_queue import Stack
 from structures.linked_list import (SingleLinkedList,DoubleLinkedList,CircularLinkedList)
 from structures.graph import Graph
 from structures.tree import TreeNode, print_tree
 from utils.search import linear_search, binary_search
 from datetime import datetime
+=======
+from structures.stack_queue import Stack, Queue
+from structures.linked_list import CircularLinkedList
+>>>>>>> f75d7907f9e37a28371497f59575f5d3bdb8dbde
 
 FLIGHT_FILE = "data/flights.json"
 BOOKING_FILE = "data/bookings.json"
 DEST_FILE = "data/destination.json"
 
+<<<<<<< HEAD
 class TravelService:
     def __init__(self, user):
         self.user = user
@@ -27,12 +33,22 @@ class TravelService:
 
     #         for item in destinasi:
     #             print("-", item)
+=======
+
+class TravelService:
+    def __init__(self, user):
+        self.user = user
+
+        self.stack = Stack()
+        self.queue = Queue()
+>>>>>>> f75d7907f9e37a28371497f59575f5d3bdb8dbde
 
     def rekomendasi_destinasi(self):
         data = load_json(DEST_FILE)
 
         print("\n=== REKOMENDASI DESTINASI ===")
 
+<<<<<<< HEAD
         root = TreeNode("Destinasi")
 
         for kategori, destinasi in data.items():
@@ -46,6 +62,25 @@ class TravelService:
         print_tree(root)
     def destinasi_populer(self):
         data = load_json(DEST_FILE)
+=======
+        for kategori, destinasi in data.items():
+            print(f"\n{kategori}")
+
+            for item in destinasi:
+                print("-", item)
+
+    # def destinasi_populer(self):
+    #     data = load_json(DEST_FILE)
+
+    #     print("\nDestinasi Populer")
+
+    #     for item in data["popular"]:
+    #         print("-", item)
+
+    def destinasi_populer(self):
+        data = load_json(DEST_FILE)
+
+>>>>>>> f75d7907f9e37a28371497f59575f5d3bdb8dbde
         cll = CircularLinkedList()
 
         for kategori in data:
@@ -73,6 +108,7 @@ class TravelService:
             elif pilih == "3":
                 break
 
+<<<<<<< HEAD
 
     def lihat_seluruh_penerbangan(self):
         flights = load_json(FLIGHT_FILE)
@@ -120,10 +156,19 @@ class TravelService:
         asal = input("Masukkan kota asal : ").title()
         tujuan = input("Masukkan kota tujuan : ").title()
 
+=======
+    def lihat_penerbangan(self):
+        asal = input("Kota asal : ")
+        tujuan = input("Kota tujuan : ")
+
+        flights = load_json(FLIGHT_FILE)
+
+>>>>>>> f75d7907f9e37a28371497f59575f5d3bdb8dbde
         hasil = []
 
         for flight in flights:
             if (
+<<<<<<< HEAD
                 flight["asal"].title() == asal
                 and
                 flight["tujuan"].title() == tujuan
@@ -257,6 +302,56 @@ class TravelService:
             "tujuan": flight["tujuan"],
             "harga": flight["harga"],
             "tanggal_booking": datetime.now().strftime("%d-%m-%Y %H:%M:%S")
+=======
+                flight["origin"].lower() == asal.lower()
+                and
+                flight["destination"].lower() == tujuan.lower()
+            ):
+                hasil.append(flight)
+
+        hasil = quick_sort(hasil)
+
+        print("\nDaftar Penerbangan")
+
+        for i, flight in enumerate(hasil, 1):
+            print(
+                i,
+                flight["origin"],
+                "->",
+                flight["destination"],
+                "| Rp",
+                flight["price"]
+            )
+
+    def booking(self):
+        flights = load_json(FLIGHT_FILE)
+
+        for i, flight in enumerate(flights, 1):
+            print(
+                i,
+                flight["origin"],
+                "->",
+                flight["destination"],
+                "| Rp",
+                flight["price"]
+            )
+
+        pilih = int(input("Pilih nomor : ")) - 1
+
+        flight = flights[pilih]
+
+        if self.user["saldo"] < flight["price"]:
+            print("Saldo tidak cukup.")
+            return
+
+        self.user["saldo"] -= flight["price"]
+
+        booking = {
+            "username": self.user["username"],
+            "origin": flight["origin"],
+            "destination": flight["destination"],
+            "price": flight["price"]
+>>>>>>> f75d7907f9e37a28371497f59575f5d3bdb8dbde
         }
 
         bookings = load_json(BOOKING_FILE)
@@ -264,6 +359,7 @@ class TravelService:
 
         save_json(BOOKING_FILE, bookings)
 
+<<<<<<< HEAD
         # self.queue.enqueue(booking)
         # self.stack.push("Booking tiket")
 
@@ -276,6 +372,13 @@ class TravelService:
     def lihat_riwayat_booking(self):
         self.booking_history.display()
         
+=======
+        self.queue.enqueue(booking)
+        self.stack.push("Booking tiket")
+
+        print("Booking berhasil.")
+
+>>>>>>> f75d7907f9e37a28371497f59575f5d3bdb8dbde
     def cari_range_harga(self):
         low = int(input("Harga minimum : "))
         high = int(input("Harga maksimum : "))
@@ -285,7 +388,11 @@ class TravelService:
         root = None
 
         for flight in flights:
+<<<<<<< HEAD
             root = insert(root, flight["harga"], flight)
+=======
+            root = insert(root, flight["price"], flight)
+>>>>>>> f75d7907f9e37a28371497f59575f5d3bdb8dbde
 
         hasil = range_search(root, low, high)
 
@@ -293,9 +400,17 @@ class TravelService:
 
         for flight in hasil:
             print(
+<<<<<<< HEAD
                 flight["asal"],
                 "->",
                 flight["tujuan"],
                 "| Rp",
                 flight["harga"]
+=======
+                flight["origin"],
+                "->",
+                flight["destination"],
+                "| Rp",
+                flight["price"]
+>>>>>>> f75d7907f9e37a28371497f59575f5d3bdb8dbde
             )

@@ -1,10 +1,17 @@
 from utils.json_handler import load_json, save_json
+<<<<<<< HEAD
 from structures.stack_queue import Stack
 # from models.user import User 
 
 USER_FILE = "data/users.json"
 BOOKING_FILE = "data/bookings.json"
 FLIGHT_FILE = "data/flights.json"
+=======
+
+USER_FILE = "data/users.json"
+BOOKING_FILE = "data/bookings.json"
+
+>>>>>>> f75d7907f9e37a28371497f59575f5d3bdb8dbde
 
 class ProfileService:
     def __init__(self, user):
@@ -54,6 +61,7 @@ class ProfileService:
 
         for item in self.user["wishlist"]:
             print("-", item)
+<<<<<<< HEAD
     
     
     def hapus_wishlist(self):
@@ -77,10 +85,17 @@ class ProfileService:
     def lihat_riwayat_booking(self):
         bookings = load_json(BOOKING_FILE)
         booking_user = []
+=======
+
+    def riwayat_booking(self):
+        bookings = load_json(BOOKING_FILE)
+
+>>>>>>> f75d7907f9e37a28371497f59575f5d3bdb8dbde
         print("\nRiwayat Booking")
 
         for booking in bookings:
             if booking["username"] == self.user["username"]:
+<<<<<<< HEAD
                 
                 print(f"kode_penerbangan :  {booking["kode_penerbangan"]}")
                 print(f"kota asal :  {booking["asal"]}")
@@ -139,3 +154,12 @@ class ProfileService:
         save_json(USER_FILE, users)
 
         print("Booking terakhir berhasil dibatalkan.")
+=======
+                print(
+                    booking["origin"],
+                    "->",
+                    booking["destination"],
+                    "| Rp",
+                    booking["price"]
+                )
+>>>>>>> f75d7907f9e37a28371497f59575f5d3bdb8dbde
