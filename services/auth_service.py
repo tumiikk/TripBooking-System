@@ -12,17 +12,47 @@ class AuthService:
         for user in self.users:
             self.table.insert(user["username"], user)
             
+
+
     def register(self):
-        username = input("Username : ")
-        password = input("Password : ")
+    # username
+        while True:
+            username = input("Username : ")
 
+            if self.table.search(username):
+                print("Username sudah ada.")
+            else:
+                break
 
-        if self.table.search(username):
-            print("Username sudah ada.")
-            return
+        # email
+        while True:
+            try:
+                email = input("Email : ")
+
+                if "@" not in email:
+                    raise ValueError("Email harus mengandung '@'.")
+
+                break
+
+            except ValueError as e:
+                print("Error:", e)
+
+        # password
+        while True:
+            try:
+                password = input("Password : ")
+
+                if len(password) < 4:
+                    raise ValueError("Password harus lebih dari 4 karakter.")
+
+                break
+
+            except ValueError as e:
+                print("Error:", e)
 
         user = {
             "username": username,
+            "email": email,
             "password": password,
             "saldo": 0,
             "wishlist": []
@@ -34,6 +64,7 @@ class AuthService:
         self.table.insert(username, user)
 
         print("Register berhasil.")
+
 
     def login(self):
         username = input("Username : ")

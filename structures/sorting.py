@@ -1,14 +1,13 @@
-def quick_sort(data):
-    if len(data) <= 1:
-        return data
+# def quick_sort(data):
+#     if len(data) <= 1:
+#         return data
 
-    pivot = data[0]
+#     pivot = data[0]
 
-    left = [x for x in data[1:] if x["price"] <= pivot["price"]]
-    right = [x for x in data[1:] if x["price"] > pivot["price"]]
+#     left = [x for x in data[1:] if x["price"] <= pivot["price"]]
+#     right = [x for x in data[1:] if x["price"] > pivot["price"]]
 
-<<<<<<< HEAD
-    return quick_sort(left) + [pivot] + quick_sort(right)
+#     return quick_sort(left) + [pivot] + quick_sort(right)
 
 def quick_sort_flights(flights):
     if len(flights) <= 1:
@@ -35,6 +34,3 @@ def quick_sort_flights(flights):
         + half
         + quick_sort_flights(right)
     )
-=======
-    return quick_sort(left) + [pivot] + quick_sort(right)
->>>>>>> f75d7907f9e37a28371497f59575f5d3bdb8dbde

@@ -22,13 +22,27 @@ class SingleLinkedList:
 
         cur.next = node
 
-    def display(self):
+    def display_riwayat_booking(self):
+        if self.head is None:
+            print("Data pemesanan masih kosong.")
+            return
+
         cur = self.head
 
-        while cur:
-            print(cur.data)
-            cur = cur.next
+        print("\n=== DATA PEMESANAN ===\n")
 
+        while cur:
+            data = cur.data
+
+            print("Username           :", data["username"])
+            print("Kode Penerbangan   :", data["kode_penerbangan"])
+            print("Tanggal Penerbangan:", data["tanggal_penerbangan"])
+            print("Rute               :", data["asal"], "->", data["tujuan"])
+            print("Harga              : Rp", f'{data["harga"]:,}'.replace(",", "."))
+            print("Tanggal Booking    :", data["tanggal_booking"])
+            print("-" * 40)
+
+            cur = cur.next
 
 class DNode:
     def __init__(self, data):

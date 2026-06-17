@@ -1,40 +1,53 @@
 [
     {
-        "username": "admin",
-        "password": "123",
-        "saldo": 5000000,
-        "wishlist": [
-            "Bali",
-            "Lombok"
-        ]
-    },
-    {
-        "username": "budi",
-        "password": "123",
-        "saldo": 30002000001,
-        "wishlist": [
-            "bali"
-        ]
-    },
-    {
         "username": "tumik",
+        "email": "izza@tumik",
         "password": "123543",
-        "saldo": 30001000000,
+        "saldo": 30000990200,
         "wishlist": [
             "bali",
             "pekan"
         ]
     },
     {
-<<<<<<< HEAD
-        "username": "fs",
-        "password": "dfdvfd",
-        "saldo": 1000000000000,
-=======
-        "username": "shabrin",
-        "password": "shab123",
+        "username": "izza",
+        "email": "izza@tumik",
+        "password": "asfdfdcsv",
         "saldo": 0,
->>>>>>> f75d7907f9e37a28371497f59575f5d3bdb8dbde
         "wishlist": []
+    },
+    {
+        "username": "ayu",
+        "email": "ayu@",
+        "password": "123543",
+        "saldo": 100000,
+        "wishlist": []
+    },
+    {
+        "username": "shabrin",
+        "email": "shabrin@",
+        "password": "shabrin123",
+        "saldo": 1000000,
+        "wishlist": [
+            "Bali",
+            "lombok",
+            "jakarta"
+        ]
+    },
+    {
+        "username": "juli",
+        "email": "juli@",
+        "password": "123543",
+        "saldo": 1800000,
+        "wishlist": []
+    },
+    {
+        "username": "iidham",
+        "email": "idham@",
+        "password": "123432",
+        "saldo": 1000000,
+        "wishlist": [
+            "pekanbaru"
+        ]
     }
 ]

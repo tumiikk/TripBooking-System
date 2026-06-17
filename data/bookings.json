@@ -25,5 +25,41 @@
         "tujuan": "Bali",
         "harga": 600000,
         "tanggal_booking": "07-06-2026 03:33:30"
+    },
+    {
+        "username": "tumik",
+        "kode_penerbangan": "AB001",
+        "tanggal_penerbangan": "2026-07-10",
+        "asal": "Pekanbaru",
+        "tujuan": "Jakarta",
+        "harga": 950000,
+        "tanggal_booking": "10-06-2026 21:14:29"
+    },
+    {
+        "username": "tumik",
+        "kode_penerbangan": "AB010",
+        "tanggal_penerbangan": "2026-08-03",
+        "asal": "Surabaya",
+        "tujuan": "Bali",
+        "harga": 600000,
+        "tanggal_booking": "10-06-2026 21:19:56"
+    },
+    {
+        "username": "tumik",
+        "kode_penerbangan": "AB010",
+        "tanggal_penerbangan": "2026-08-03",
+        "asal": "Surabaya",
+        "tujuan": "Bali",
+        "harga": 600000,
+        "tanggal_booking": "10-06-2026 21:23:41"
+    },
+    {
+        "username": "juli",
+        "kode_penerbangan": "AB010",
+        "tanggal_penerbangan": "2026-08-03",
+        "asal": "Surabaya",
+        "tujuan": "Bali",
+        "harga": 600000,
+        "tanggal_booking": "11-06-2026 20:05:28"
     }
 ]

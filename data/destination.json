@@ -2,14 +2,30 @@
     "Pantai": [
         "Bali",
         "Lombok",
-        "Raja Ampat"
+        "Raja Ampat",
+        "Pantai Kuta",
+        "Pantai Pink"
     ],
     "Gunung": [
         "Bromo",
-        "Rinjani"
+        "Rinjani",
+        "Semeru",
+        "Merapi"
     ],
     "Kota": [
         "Yogyakarta",
-        "Bandung"
+        "Bandung",
+        "Jakarta",
+        "Malang"
+    ],
+    "Danau": [
+        "Danau Toba",
+        "Danau Singkarak",
+        "Danau Maninjau"
+    ],
+    "Pulau": [
+        "Pulau Komodo",
+        "Pulau Belitung",
+        "Pulau Weh"
     ]
 }
